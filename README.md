@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Also includes viem and wagmi for connecting to the Ethereum network and reading a contract
+
 ## Getting Started
 
 First, run the development server:
