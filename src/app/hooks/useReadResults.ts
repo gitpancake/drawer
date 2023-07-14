@@ -42,7 +42,7 @@ export const useReadResults = ({ key }: Props) => {
   const [winners, setWinners] = useState<string[]>([]);
   const { setConfetti } = useConfettiContext();
 
-  //@ts-ignore
+  //@ts-ignore - i made a mistake on the contract abi, should be a string
   const { data } = useContractRead({ address, abi, functionName: "viewResults", args: [BigInt(key)] });
 
   useEffect(() => {
