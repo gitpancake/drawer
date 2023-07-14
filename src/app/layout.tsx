@@ -23,11 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:url" content={`https://winners.henrypye.xyz`} />
         <meta property="og:image:width" content="708" />
         <meta property="og:image:height" content="372" />
-        <meta property="twitter:title" content="Winneres Draw" />
-        <meta property="twitter:image" content="/placeholder.png" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:description" content="A website with an Ethereum blockchain connection to read winners from the results contract." />
-        <meta property="twitter:url" content={`https://winners.henrypye.xyz`} />
+        <meta name="twitter:title" content="Winneres Draw" />
+        <meta name="twitter:image" content="/placeholder.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="A website with an Ethereum blockchain connection to read winners from the results contract." />
+        <meta name="twitter:url" content={`https://winners.henrypye.xyz`} />
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
