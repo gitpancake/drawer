@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="description" content="A website with an Ethereum blockchain connection to read winners from the results contract." />
         <meta property="og:title" content="Winneres Draw" />
         <meta property="og:site_name" content="Winneres Draw" />
@@ -28,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content="A website with an Ethereum blockchain connection to read winners from the results contract." />
         <meta name="twitter:url" content={`https://winners.henrypye.xyz`} />
-      </Head>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
