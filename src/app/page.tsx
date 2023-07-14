@@ -9,7 +9,7 @@ const config = createConfig({
   autoConnect: true,
   publicClient: createPublicClient({
     chain: mainnet,
-    transport: http("https://eth.llamarpc.com"),
+    transport: http(),
   }),
 });
 

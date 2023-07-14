@@ -26,7 +26,7 @@ const results = [
 const address = "0xb6a371e05cfbd73ee293699c4bb7d8e60472a6f3";
 const abi = [
   {
-    inputs: [{ internalType: "uint256", name: "key", type: "uint256" }],
+    inputs: [{ internalType: "string", name: "key", type: "string" }],
     name: "viewResults",
     outputs: [{ internalType: "uint256[]", name: "", type: "uint256[]" }],
     stateMutability: "view",
@@ -42,6 +42,7 @@ export const useReadResults = ({ key }: Props) => {
   const [winners, setWinners] = useState<string[]>([]);
   const { setConfetti } = useConfettiContext();
 
+  //@ts-ignore
   const { data } = useContractRead({ address, abi, functionName: "viewResults", args: [BigInt(key)] });
 
   useEffect(() => {
