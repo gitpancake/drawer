@@ -6,6 +6,7 @@ import { useReadResults } from "../hooks/useReadResults";
 
 export const Home = () => {
   const [key] = useState<number>(1689353268);
+  const [contract] = useState<string>("0xb6a371e05cfbd73ee293699c4bb7d8e60472a6f3");
   const { winners } = useReadResults({ key });
 
   return (
@@ -14,7 +15,7 @@ export const Home = () => {
       <p className="text-base">
         Chooser Contract:{" "}
         <Link href="https://etherscan.io/address/0xb6a371e05cfbd73ee293699c4bb7d8e60472a6f3" target="_black">
-          0xb6a371e05cfbd73ee293699c4bb7d8e60472a6f3
+          {`${contract.substring(0, 6)}...${contract.substring(contract.length - 6)}`}
         </Link>
       </p>
       <p className="text-base">Results Key: {key}</p>
